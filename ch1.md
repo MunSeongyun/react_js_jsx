@@ -13,27 +13,28 @@ const age = 20;            // 数値 (Number) - クォーテーションは不�
 const isOk = true;         // 真偽値 (Boolean) - true または false のみ
 const missed = null;       // 明示的に「空っぽ」であることを示す値 (Null)
 let undefinedVar;          // 値がまだ割り当てられていない状態 (Undefined)
-
+```
 ### 2. 演算子 (Operators)
 値を計算したり、比較したり、結合したりするときに使用する記号です。
 
 2.1 算術演算子
 基本的な四則演算や文字列の結合を行います。
 
-JavaScript
+```JavaScript
 const sum = 10 + 5; // 15
 const msg = "こんにちは、" + "世界"; // "こんにちは、世界" (文字列の結合)
+```
 2.2 厳密等価演算子 (===, !==)
 JavaScriptで値を比較する際は、値だけでなくデータ型まで完全に一致しているかをチェックする === を使うのが原則です。
 
-JavaScript
+```JavaScript
 console.log(10 === 10);   // true  (数値同士で完全に一致)
 console.log(10 === "10"); // false (数値と文字列なので型が異なり、不一致とみなされる)
-
+```
 ### 3. 条件分岐 (if, else if, else)
 プログラムに対して「もし〜なら、このように処理せよ」と条件に応じた指示を出すための文法です。
 
-JavaScript
+```JavaScript
 const score = 85;
 
 if (score >= 90) {
@@ -43,14 +44,14 @@ if (score >= 90) {
 } else {
   console.log("評価: C");
 }
-
+```
 ### 4. オブジェクトと配列 (Objects & Arrays)
 関連性のある複数のデータを一つにまとめて管理するための「カゴ（データ構造）」のような概念です。
 
 4.1 オブジェクト (Object)
 キー(Key)と値(Value)のペアでデータを管理する構造です。
 
-JavaScript
+```JavaScript
 const person = {
   name: "イ・モンリョン",
   age: 22,
@@ -60,9 +61,10 @@ const person = {
 // データへのアクセス方法 (ドット記法)
 console.log(person.name); // "イ・モンリョン"
 4.2 配列 (Array)
+```
 順序（インデックス）のあるデータのリストです。
 
-JavaScript
+```JavaScript
 const fruits = ["りんご", "バナナ", "いちご"];
 
 // データへのアクセス方法 (インデックスは0から始まります)
@@ -70,12 +72,12 @@ console.log(fruits[0]); // "りんご"
 console.log(fruits.length); // 3 (配列の要素数)
 ⚠️ 重要: constで宣言したオブジェクトのプロパティ変更の原理
 const（定数）で宣言した変数は再割り当て（再代入）が禁止されていますが、オブジェクトや配列の内部の値を変更することは可能です。
-
+```
 できること: オブジェクト内のプロパティの値を書き換えたり、新しいプロパティを追加・削除すること。
 
 できないこと: 変数そのものに、新しいオブジェクトを丸ごと入れ替える（再代入する）こと。
 
-JavaScript
+```JavaScript
 const user = {
   name: "キム",
   age: 20
@@ -91,6 +93,7 @@ user = {
   name: "パク",
   age: 25
 }; // TypeError: Assignment to constant variable. (エラーが発生)
+```
 💡 なぜ可能なのか？ (メモリ参照の概念)
 JavaScriptにおいて、オブジェクトや配列はメモリ上の特定の住所（参照値）に保存されます。constが保護しているのは、変数 user が指し示している 「メモリ上の住所（参照）」 であり、その住所の中にある 「実際のデータ」 ではありません。
 したがって、住所そのものを変えずに、中身のデータを書き換える行為は const のルールに違反しません。
@@ -98,7 +101,7 @@ JavaScriptにおいて、オブジェクトや配列はメモリ上の特定の�
 ### 5. ループ処理 (for文)
 特定の処理を指定した回数だけ繰り返し実行したい場合に使用します。
 
-JavaScript
+```JavaScript
 // iが0から始まり、5未満である間、iを1ずつ増やしながら繰り返す
 for (let i = 0; i < 5; i++) {
   console.log(`${i}回目の実行`); 
@@ -111,3 +114,4 @@ for (let i = 0; i < 5; i++) {
 3回目の実行
 4回目の実行
 */
+```
