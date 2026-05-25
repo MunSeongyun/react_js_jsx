@@ -60,8 +60,9 @@ const person = {
 
 // データへのアクセス方法 (ドット記法)
 console.log(person.name); // "イ・モンリョン"
-4.2 配列 (Array)
 ```
+4.2 配列 (Array)
+
 順序（インデックス）のあるデータのリストです。
 
 ```JavaScript
